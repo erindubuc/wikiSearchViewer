@@ -4,33 +4,51 @@
     <title>Wikipedia Viewer</title>
     <link rel="stylesheet" src="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+<style>
+    .text-center {
+        text-align: center;
+    }
+    .searchResults {
+        justify-content: center;
+        padding: 5px;
+    }
+    
+</style>
 </head>
 <body>
-    <div class="container">
-        <h1 style="">Wikipedia Search</h1>
+<div class="container text-center">
+    <h2 style="margin-top: 10px;">Wikipedia Search</h2>
+    <!--random search generator attached to wiki image-->
+        <div class="search" id="randomSearch">
             <a href="https://en.wikipedia.org/wiki/Special:Random" target="blank">
-                <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png" style="height: 250px">
-            </a>
-        </div>
-    <div class="container"> 
-        <!--search bar for input and button-->
-            <input class="from-control" id="input"/>
-            <button id="search" type="button" class="btn btn-secondary">SEARCH</button>
-    </div> 
-    <!--output search results displayed-->
-    <div class="results">
-        <ul id="output">
-            
-            
-            
-            
-        </ul>
-    </div>
-   
+            <img src="https://upload.wikimedia.org/wikipedia/en/thumb/8/80/Wikipedia-logo-v2.svg/1122px-Wikipedia-logo-v2.svg.png" style="height: 150px; margin-top: 20px;"></a>
+            <p style="margin-top: 10px;">Click the image for a random article!</p>
+        </div>    
+    <h3 style="margin-top: 10px;">OR...</h3>
+	<!--search field-->
+	<div id="searchField">
+	     <!--search bar for input and button-->
+        <form action="" class="search-form" style="margin-top: 10px;">
+            <input type="text" name="search" placeholder="Search Wikipedia..." class="search-form-input" id="search-form-input">
+        </form>
     
+    <!--/*button to trigger search*/-->
+	<div id="wikiSearch"> 
+	    <button id="search" type="button" class="btn btn-secondary" style="margin-top: 15px;">SEARCH</button>
+		</div>
+	</div>
+	<!--output search results displayed-->
+	<section class="searchResults">
+	    <ul id="searchResults">
+	        
+		</ul>
+	</section>
+</div>
+
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="scripts.js"></script>
     
 </body>    
 </html>
